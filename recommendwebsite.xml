@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <item text="百度" des="">
+<url>https://www.baidu.com/</url>
+</item>
+  <item text="QQ" des="">
+<url>http://qq.com</url>
+    </item>
+  <item text="凤凰网" des="">
+<url>http://i.ifeng.com/</url>
+</item>
+  <item text="网易" des="">
+<url>http://3g.163.com/touch/</url>
+</item>
+<item text="搜狐" des="">
+<url>http://m.sohu.com/</url>
+</item>
+  <item text="微博" des="">
+<url>http://weibo.com/</url>
+</item>
+<item text="新浪网" des="">
+<url>http://sina.cn/?vt=3</url>
+</item>
+<item text="天涯" des="">
+<url>http://m.tianya.cn/</url>
+</item>
+<item text="QQ空间" des="">
+<url>http://m.qzone.com</url>
+</item>
+<item text="中经电视" des="">
+<url>http://wap.ce.cn/sy/cen/</url>
+</item>
+<item text="百度触屏版" des="">
+<url>http://m.baidu.com/?pu=sz%401320_480</url>
+</item>
+<item text="知音两性频道" des="">
+<url>http://wap.zhiyin.cn/list-102</url>
+</item>
+<item text="网易情爱" des="">
+<url>http://3g.163.com/ntes/special/00340D52/3gtouchlist.html?docid=9ARLCES3yswang</url>
+</item>
+<item text="webqq" des="">
+<url>http://w.qq.com/</url>
+</item>
+<item text="无名小站 " des="">
+<url>http://www.dilidili.com/</url>
+</item>
+<item text="科学网" des="">
+<url>http://wap.sciencenet.cn/</url>
+</item>
+<item text="cnn" des="">
+<url>http://edition.cnn.com/</url>
+</item>
+<item text="中国网多语言版" des="">
+<url>http://m.china.com.cn//common/other/an.html</url>
+</item>
+<item text="中国网" des="">
+<url>http://m.china.com.cn/</url>
+</item>
+<item text="捧腹网" des="">
+<url>http://m.pengfu.com/</url>
+</item>
+<item text="图老师" des="">
+<url>http://m.tulaoshi.com/</url>
+</item>
+<item text="几分钟" des="">
+<url>http://m.jifenzhong.com/</url>
+</item>
+<item text="小黄鸡聊天" des="">
+<url>http://chat.xiaohuangji.com/</url>
+</item>
+<item text="开心网" des="">
+<url>http://m.kaixin001.com/repaste/random_0.html</url>
+</item>
+<item text="心灵咖啡" des="">
+<url>http://m.psycofe.com/</url>
+</item>
+<item text="短文学" des="">
+<url>http://m.duanwenxue.com/</url>
+</item>
+<item text="十年社交" des="">
+<url>http://10years.me/wall/find</url>
+</item>
+<item text="界面网" des="">
+<url>http://m.jiemian.com/</url>
+</item>
+<item text="腾讯牛评" des="">
+<url>http://www.qq.com/coral/coralindex/indexCoral_new.htm</url>
+</item>
+<item text="搜狐白社会" des="">
+<url>http://m.bai.sohu.com/</url>
+</item>
+<item text="漂亮网 " des="">
+<url>http://m.piaoliang.com/</url>
+</item>
+<item text="言情小说" des="">
+<url>http://m.xs8.cn/</url>
+</item>
+<item text="ellechina" des="">
+<url>http://m.ellechina.com/#/</url>
+</item>
+<item text="男人装" des="">
+<url>http://m.enrz.com/</url>
+</item>
+<item text="vogue时尚网" des="">
+<url>http://m.vogue.com.cn/</url>
+</item>
+<item text="中国服装网" des="">
+<url>http://m.efu.com.cn/</url>
+</item>
+<item text="多知网" des="">
+<url>http://www.duozhi.com/</url>
+</item>
+<item text="齐鲁网" des="">
+<url>http://m.iqilu.com/</url>
+</item>
+<item text="华商网" des="">
+<url>http://m.hsw.cn/</url>
+</item>
+<item text="国际在线" des="">
+<url>http://gb.cri.cn/</url>
+</item>
+<item text="第一视频" des="">
+<url>http://m.v1.cn/</url>
+</item>
+<item text="华生在线" des="">
+<url>http://m.voc.com.cn/</url>
+</item>
+<item text="360导航" des="">
+<url>http://m.3600.com</url>
+</item>
+<item text="财经网" des="">
+<url>http://m.caijing.com.cn/</url>
+</item>
+<item text="v2ex" des="">
+<url>http://www.v2ex.com/</url>
+</item>
+<item text="简书" des="">
+<url>http://www.jianshu.com/</url>
+</item>
+<item text="大众点评" des="">
+<url>http://m.dianping.com/</url>
+</item>
+<item text="five" des="">
+<url>http://jackdcrawford.github.io/five/</url>
+</item>
+<item text="创业邦" des="">
+<url>http://m.cyzone.cn/</url>
+</item>
+<item text="中国通信网" des="">
+<url>http://m.c114.net/index.asp?c=wap</url>
+</item>
+<item text="电脑爱好者" des="">
+<url>http://m.cfan.com.cn/</url>
+</item>
+<item text="亿邦动力" des="">
+<url>http://m.ebrun.com/</url>
+</item>
+<item text="速途网" des="">
+<url>http://m.sootoo.com/</url>
+</item>
+<item text="比特网" des="">
+<url>http://m.chinabyte.com/</url>
+</item>
+<item text="赛迪网" des="">
+<url>http://m.ccidnet.com/#m/</url>
+</item>
+<item text="光芒网" des="">
+<url>http://www.comon.cn/index.php?m=wap</url>
+</item>
+<item text="豆瓣电影" des="">
+<url>http://m.douban.com/movie/recent/</url>
+</item>
+<item text="豆瓣小组" des="">
+<url>http://m.douban.com/group/explore?session=e817eab2</url>
+</item>
+<item text="职友集" des="">
+<url>http://m.jobui.com/</url>
+</item>
+<item text="国外打飞机" des="">
+<url>http://phoboslab.org/xtype/</url>
+</item>
+<item text="3g门户" des="">
+<url>http://3g.net.cn/</url>
+</item>
+<item text="易查网" des="">
+<url>http://page.yicha.cn/tp/i.y</url>
+</item>
+<item text="壹心理" des="">
+<url>http://m.xinli001.com/</url>
+</item>
+<item text="有妖气" des="">
+<url>http://m.u17.com/</url>
+</item>
+<item text="下厨房" des="">
+<url>http://m.xiachufang.com/</url>
+</item>
+<item text="bilibili" des="">
+<url>http://www.bilibili.com/</url>
+</item>
+<item text="穷游网" des="">
+<url>http://m.qyer.com/</url>
+</item>
+<item text="gifhell" des="">
+<url>http://www.gifhell.com/</url>
+</item>
+<item text="超酷涂鸦板" des="">
+<url>http://weavesilk.com/</url>
+</item>
+<item text="智联招聘" des="">
+<url>http://m.zhaopin.com/</url>
+</item>
+<item text="前程无忧" des="">
+<url>http://m.51job.com/</url>
+</item>
+<item text="大街网" des="">
+<url>http://m.dajie.com/job/index</url>
+</item>
+<item text="应届生求职网" des="">
+<url>http://m.yingjiesheng.com/</url>
+</item>
+<item text="超级扫雷" des="">
+<url>http://mienfield.com/</url>
+</item>
+<item text="菜鸟到高手" des="">
+<url>https://giveit100.com/</url>
+</item>
+<item text="秒变黑客" des="">
+<url>http://geektyper.com/</url>
+</item>
+<item text="奇葩网" des="">
+<url>http://www.qipawang.com/m/</url>
+</item>
+<item text="猜什么话" des="">
+<url>http://greatlanguagegame.com/guess/</url>
+</item>
+<item text="穿帮网" des="">
+<url>http://www.bug.cn/</url>
+</item>
+<item text="科学松鼠会" des="">
+<url>http://songshuhui.net/</url>
+</item>
+<item text="buzzfeed" des="">
+<url>http://www.buzzfeed.com/</url>
+</item>
+<item text="naver" des="">
+<url>http://www.naver.com/</url>
+</item>
+<item text="huffingtonpost" des="">
+<url>http://www.huffingtonpost.com/</url>
+</item>
+<item text="图解教育" des="">
+<url>http://edu.qq.com/graph/index.htm</url>
+</item>
+<item text="腾讯数聚酷" des="">
+<url>http://digi.tech.qq.com/zhuanti/datacool/index.htm</url>
+</item>
+<item text="腾讯今日话题" des="">
+<url>http://view.news.qq.com/</url>
+</item>
+<item text="人民网" des="">
+<url>http://m.people.cn/</url>
+</item>
+<item text="科学网" des="">
+<url>hhttp://wap.sciencenet.cn/</url>
+</item>
+<item text="百度口碑真相墙" des="">
+<url>http://koubei.baidu.com/truth/wall?nav=truthwall</url>
+</item>
+<item text="百度真相问答机" des="">
+<url>http://zhidao.baidu.com/liuyan</url>
+</item>
+<item text="凤凰一日一书" des="">
+<url>http://book.ifeng.com/dynlist/yiriyishu/1/wendanglist.shtml</url>
+</item>
+<item text="糗事百科" des="搞笑,有趣,幽默">
+<url>http://www.qiushibaike.com/</url>
+</item>
+<item text="南京龙虎网" des="">
+<url>http://m.longhoo.net/</url>
+</item>
+<item text="百思不得姐" des="">
+<url>http://www.budejie.com/</url>
+</item>
+<item text="太平洋汽车网" des="">
+<url>http://m.pcauto.com.cn/</url>
+</item>
+<item text="techweb" des="">
+<url>http://www.techweb.com.cn/ucweb/home</url>
+</item>
+<item text="汽车之家" des="">
+<url>http://m.autohome.com.cn/</url>
+</item>
+<item text="车问网" des="">
+<url>http://m.chewen.com/</url>
+</item>
+<item text="驾驶员考试网" des="">
+<url>http://m.jsyks.com/</url>
+</item>
+<item text="51汽车网" des="">
+<url>http://m.51auto.com/</url>
+</item>
+<item text="苏宁易购" des="">
+<url>http://m.suning.com/</url>
+</item>
+<item text="瑞丽网" des="">
+<url>http://m.rayli.com.cn/</url>
+</item>
+<item text="虾米音乐" des="">
+<url>http://m.xiami.com/</url>
+</item>
+<item text="音悦台" des="">
+<url>http://m.yinyuetai.com/</url>
+</item>
+<item text="中关村在线" des="">
+<url>http://m.zol.com.cn/</url>
+</item>
+<item text="花瓣最新" des="">
+<url>http://huaban.com/all/</url>
+</item>
+<item text="堆糖" des="">
+<url>http://www.duitang.com/</url>
+</item>
+<item text="花瓣流行" des="">
+<url>http://huaban.com/hot/</url>
+</item>
+<item text="值得买" des="">
+<url>http://m.smzdm.com/</url>
+</item>
+<item text="凤凰视觉印象" des="">
+<url>http://blog.ifeng.com/more/10.html</url>
+</item>
+<item text="西祠胡同" des="">
+<url>http://m.xici.net/</url>
+</item>
+
+<item text="南方都市报" des="">
+<url>http://nandu.media.baidu.com/</url>
+</item>
+<item text="第一财经日报" des="">
+<url>http://yicai.media.baidu.com/</url>
+</item>
+<item text="北京青年" des="">
+<url>http://ynet.media.baidu.com/</url>
+</item>
+<item text="澎湃" des="">
+<url>http://pengpai.media.baidu.com/</url>
+</item>
+<item text="潇湘晨报" des="">
+<url>http://xxcb.media.baidu.com/</url>
+</item>
+<item text="tmz" des="">
+<url>http://m.tmz.com/</url>
+</item>
+<item text="百度百家" des="">
+<url>http://baijia.baidu.com/</url>
+</item>
+<item text="腾讯大家" des="">
+<url>http://dajia.qq.com/</url>
+</item>
+<item text="businessinsider" des="">
+<url>http://www.businessinsider.com/</url>
+</item>
+<item text="腾讯谈资" des="">
+<url>http://dajia.qq.com/column</url>
+</item>
+<item text="新浪博客" des="">
+<url>http://blog.sina.cn/</url>
+</item>
+<item text="mashable" des="">
+<url>http://mashable.com/</url>
+</item>
+<item text="blogtopsites" des="">
+<url>http://www.blogtopsites.com/</url>
+</item>
+<item text="百度音乐人" des="">
+<url>http://y.baidu.com/</url>
+</item>
+<item text="百度经验" des="">
+<url>http://jingyan.baidu.com/</url>
+</item>
+<item text="花瓣" des="">
+<url>http://huaban.com/</url>
+</item>
+<item text="有趣网址之家"      des="">
+    <url>http://youquhome.com/</url>
+  </item>
+<item text="巨有趣"      des="">
+    <url>http://www.juyouqu.com/</url>
+  </item>
+<item text="麦糖"      des="">
+    <url>http://www.maitang.com/</url>
+  </item>
+<item text="互联网资讯"      des="">
+    <url>http://www.anzii.com/</url>
+  </item>
+<item text="听,声音"      des="">
+    <url>http://www.zuixifeng.com/</url>
+  </item>
+<item text="搞技术·屮生活"      des="">
+    <url>http://xifengzui.com</url>
+  </item>
+<item text="hao123"      des="">
+    <url>http://m.hao123.com/</url>
+  </item>
+<item text="qq导航"      des="">
+    <url>http://m.hao.qq.com/</url>
+  </item>
+<item text="360"      des="">
+    <url>http://m.hao.360.cn/</url>
+  </item>
+<item text="新华网" des="">
+    <url>http://m.news.cn/html</url>
+  </item>
+<item text="3gqq" des="">
+    <url>http://info.3g.qq.com</url>
+  </item>
+<item text="腾讯文学" des="">
+    <url>http://ubook.qq.com/5/index.html</url>
+  </item>
+<item text="微博" des="">
+    <url>http://weibo.cn/pub/</url>
+  </item>
+<item text="人人" des="">
+    <url>http://m.renren.com/</url>
+  </item>
+<item text="3gqq视频" des="">
+    <url>http://infoapp.3g.qq.com/g/</url>
+  </item>
+<item text="cctv" des="">
+    <url>http://wap.cctv.com</url>
+  </item>
+<item text="光明网" des="">
+    <url>http://wap.gmw.com</url>
+  </item>
+<item text="羊城晚报" des="">
+    <url>http://wap.ycwb.com</url>
+  </item>
+<item text="参考消息" des="">
+    <url>http://m.cankaoxiaoxi.com</url>
+  </item>
+<item text="yahoo" des="">
+    <url>http://m.yahoo.com</url>
+  </item>
+<item text="bbc" des="">
+    <url>http://m.bbc.com</url>
+  </item>
+<item text="中国天气网"      des="">
+    <url>http://m.weather.com.cn/</url>
+  </item>
+<item text="中国农业新闻网"      des="">
+    <url>http://www.farmer.com.cn/</url>
+  </item>
+<item text="沪江网"      des="">
+    <url>http://m.hujiang.com/</url>
+  </item>
+<item text="图趣"      des="">
+    <url>http://m.tuquu.com/</url>
+  </item>
+<item text="丁香园"      des="">
+    <url>http://3g.dxy.cn/</url>
+  </item>
+<item text="医学教育网"      des="">
+    <url>http://m.med66.com/</url>
+  </item>
+<item text="医学百科"      des="">
+    <url>http://www.a-hospital.com/</url>
+  </item>
+<item text="海外网"      des="">
+    <url>http://m.haiwainet.cn/</url>
+  </item>
+<item text="首都千龙网"      des="">
+    <url>http://3g.qianlong.com/</url>
+  </item>
+<item text="扬子晚报网"      des="">
+    <url>http://m.yangtse.com/</url>
+  </item>
+<item text="苏州网"      des="">
+    <url>http://m.subaonet.com/</url>
+  </item>
+<item text="荆楚网"      des="">
+    <url>http://wap.cnhubei.com/</url>
+  </item>
+<item text="文汇网"      des="">
+    <url>http://whb.cn/</url>
+  </item>
+<item text="socl"      des="">
+    <url>http://www.so.cl/</url>
+  </item>
+<item text="手机中原网"      des="">
+    <url>http://3g.zynews.com/wap.htm</url>
+  </item>
+<item text="pinterest"      des="">
+    <url>https://www.pinterest.com/</url>
+  </item>
+<item text="reddit"      des="">
+    <url>http://www.reddit.com/.compact?keep_extension=True</url>
+  </item>
+ <item text="女性导航"      des="">
+    <url>http://m.hao.360.cn/simple/female.html</url>
+  </item>
+ <item text="知音"      des="">
+    <url>http://wap.zhiyin.cn/</url>
+  </item>
+<item text="大公报"      des="">
+    <url>http://wap.takungpao.com/</url>
+  </item>
+<item text="南方周末"      des="">
+    <url>http://wap.infzm.com/</url>
+  </item>
+<item text="南方周末投票"      des="">
+    <url>http://www.infzm.com/vote.shtml</url>
+  </item>
+  <item text="cnbeta"      des="">
+    <url>http://m.cnbeta.com/</url>
+  </item>
+<item text="36kr"      des="">
+    <url>http://m.36kr.com/</url>
+  </item>
+<item text="中国农业信息网"      des="">
+    <url>http://www.agri.gov.cn/V20/ZX/nyyw/</url>
+  </item>
+<item text="中研网"      des="">
+    <url>http://m.chinairn.com/</url>
+  </item>
+<item text="联商网"      des="">
+    <url>http://m.linkshop.com/</url>
+  </item>
+<item text="中国农村网"      des="">
+    <url>http://www.crnews.net/</url>
+  </item>
+<item text="兴农网"      des="">
+    <url>http://www.xn121.com/</url>
+  </item>
+<item text="农视网"      des="">
+    <url>http://www.ntv.cn/</url>
+  </item>
+<item text="众筹网"      des="">
+    <url>http://m.zhongchou.cn/</url>
+  </item>
+ <item text="读者"      des="">
+    <url>http://wap.hdz8.cn/</url>
+  </item>
+<item text="学习啦"      des="">
+    <url>http://m.xuexila.com/</url>
+  </item>
+ <item text="听新闻"      des="">
+    <url>http://www.52rkl.cn/tingxinwen/</url>
+  </item>
+ <item text="随便听歌"      des="">
+    <url>http://fm.baidu.com/</url>
+  </item>
+ <item text="荔枝fm"      des="">
+    <url>http://www.lizhi.fm/#/promo/1</url>
+  </item>
+<item text="百度图说天下"      des="">
+    <url>http://image.baidu.com/channel/info</url>
+  </item>
+<item text="MBA智库商学院"      des="">
+    <url>http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5</url>
+  </item>
+<item text="爱奇艺教育"      des="">
+    <url>http://edu.iqiyi.com/</url>
+  </item>
+<item text="cnet"      des="">
+    <url>http://www.cnet.com/videos/</url>
+  </item>
+<item text="engadget中国"      des="">
+    <url>http://cn.engadget.com/</url>
+  </item>
+<item text="engadget中国"      des="">
+    <url>http://cn.engadget.com/</url>
+  </item>
+<item text="engadget"      des="">
+    <url>http://www.engadget.com/</url>
+  </item>
+  <item text="3G泡泡"      des="">
+    <url>http://3gpp.com.cn </url>
+  </item>
+  <item text="空中网"      des="">
+    <url>http://kong.net/</url>
+  </item>
+  <item text="wap天天图"      des="">
+    <url>http://www.waptt.com/</url>
+  </item>
+<item text="华夏时报"      des="">
+    <url>http://www.chinatimes.cc/</url>
+  </item>
+<item text="开源中国"      des="">
+    <url>http://m.oschina.net/</url>
+  </item>
+<item text="csdn"      des="">
+    <url>http://m.csdn.net/</url>
+  </item>
+<item text="cnblogs"      des="">
+    <url>http://m.cnblogs.com/</url>
+  </item>
+<item text="站长之家"      des="">
+    <url>http://m.chinaz.com/</url>
+  </item>
+<item text="51cto"      des="">
+    <url>http://m.51cto.com/</url>
+  </item>
+<item text="Windows Phone Dev Center"      des="">
+    <url>https://dev.windows.com/</url>
+  </item>
+<item text="Windows API "      des="">
+    <url>https://msdn.microsoft.com/zh-cn/library/windows/apps/br211377.aspx</url>
+  </item>
+<item text=".NET API"      des="">
+    <url>https://msdn.microsoft.com/zh-CN/library/windows/apps/br230232.aspx</url>
+  </item>
+<item text="msdn library"      des="">
+    <url>https://msdn.microsoft.com/zh-cn/library/</url>
+  </item>
+<item text="stackoverflow"      des="">
+    <url>http://stackoverflow.com/</url>
+  </item>
+<item text="ft中文网"      des="">
+    <url>http://m.ftchinese.com/</url>
+  </item>
+<item text="chinadaily"      des="">
+    <url>http://language.chinadaily.com.cn/</url>
+  </item>
+<item text="果壳"      des="">
+    <url>http://m.guokr.com/</url>
+  </item>
+<item text="价值中国"      des="">
+    <url>http://m.chinavalue.net/</url>
+  </item>
+<item text="南都网"      des="">
+    <url>http://m.nandu.com/</url>
+  </item>
+<item text="小鱼网"      des="">
+    <url>http://bbs.xmfish.com/wap/</url>
+  </item>
+<item text="dospy"      des="">
+    <url>http://bbs.dospy.com/?forceMobile=1</url>
+  </item>
+<item text="煎蛋"      des="">
+    <url>http://jandan.net/</url>
+  </item>
+<item text="澎湃新闻网"      des="">
+    <url>http://www.thepaper.cn/</url>
+  </item>
+<item text="香港文汇网"      des="">
+    <url>http://m.wenweipo.com/</url>
+  </item>
+<item text="译言精选"      des="">
+    <url>http://m.wenweipo.com/</url>
+  </item>
+<item text="联合早报网"      des="">
+    <url>http://m.zaobao.com/</url>
+  </item>
+<item text="中国时报网(台湾)"      des="">
+    <url>http://www.chinatimes.com/</url>
+  </item>
+<item text="朝鲜日报"      des="">
+    <url>http://www.chosunonline.com/index.html</url>
+  </item>
+<item text="中华人民共和国中央人民政府门户网站"      des="">
+    <url>http://www.gov.cn/</url>
+  </item>
+<item text="参考消息"      des="">
+    <url>http://m.cankaoxiaoxi.com/</url>
+  </item>
+<item text="cia"      des="">
+    <url>https://www.cia.gov/index.html</url>
+  </item>
+<item text="esa(欧洲航天局)"      des="">
+    <url>http://www.esa.int/ESA</url>
+  </item>
+<item text="美国政府网"      des="">
+    <url>http://www.usa.gov/</url>
+  </item>
+<item text="英国"      des="">
+    <url>https://www.gov.uk/</url>
+  </item>
+<item text="who"      des="">
+    <url>http://www.who.int/</url>
+  </item>
+<item text="中华人民共和国国家卫生和计划生育委员会"      des="">
+    <url>http://www.nhfpc.gov.cn/</url>
+  </item>
+<item text="联合国"      des="">
+    <url>http://www.un.org/zh/</url>
+  </item>
+</Items>
+
