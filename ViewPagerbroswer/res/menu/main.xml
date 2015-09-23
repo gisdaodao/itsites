@@ -20,5 +20,9 @@
         android:orderInCategory="90"
        android:title="@string/randomsee"
         app:showAsAction="never"/>
-
+  <item
+       android:id="@+id/addnew"
+        android:orderInCategory="90"
+       android:title="添加"
+        app:showAsAction="never"/>
 </menu>

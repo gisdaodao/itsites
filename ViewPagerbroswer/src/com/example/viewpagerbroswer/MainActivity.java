@@ -76,7 +76,7 @@ import org.xmlpull.v1.XmlSerializer;
 import android.util.Xml;
 
 public class MainActivity extends ActionBarActivity {
-	 private String[] tabs=new String[]{"待实现"};
+	 private String[] tabs=new String[]{"待实现","共享的"};
 	 private DrawerLayout drawerLayout;
 	    private ActionBarDrawerToggle toggle;
 	    private ListView navList;
@@ -99,7 +99,20 @@ public class MainActivity extends ActionBarActivity {
         drawerLayout=(DrawerLayout)findViewById(R.id.drawer_layout);
         navList=(ListView)findViewById(R.id.left_drawer);
         
-      //  navList.setOnItemClickListener(this);
+        navList.setOnItemClickListener(new OnItemClickListener() {
+        	@Override
+
+        	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+
+        	long arg3) {
+        		Intent intent = new Intent(MainActivity.this, Allsites.class);
+        		   //启动Activity
+        		   startActivity(intent);
+
+        	}
+     
+        }
+        );
         initListView();
       
         initDrawerLayout();
@@ -296,7 +309,11 @@ catch(Exception e)
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.addnew) {
+        	Intent intent = new Intent(MainActivity.this, Addnewsite.class);
+      
+        	 startActivity(intent);
+
             return true;
         }
         if (id == R.id.suilan) {
