@@ -11,20 +11,19 @@
     <script type="text/javascript">
         jQuery(document).ready(function () {
            
-            alert("触发 dom 事件！\nURL: ");
-            Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
-            alert("触发 dom 事件！\nURL: ");
+        //    alert("触发 dom 事件！\nURL: ");
+           // Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
+          //  alert("触发 dom 事件！\nURL: ");
         });
         window.onload=function(){
 
             //编写代码  alert("触发 dom 事件！\nURL: ");
             Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
-            alert("触发 window 事件！\nURL: ");
+           // alert("触发 window 事件！\nURL: ");
         }
 
         $(document).on("load", function (event, data) {
-            alert("触发 pageload 事件！\nURL: " + data.url);
-            Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
+           
         });
         $(document).ready(function () {
             $("#idbtnsubmit").bind("click",
@@ -39,7 +38,7 @@
                    // alert(texturl);
                     var websiteinfo = Bmob.Object.extend("websiteinfo");
                     var gameScore = new websiteinfo();
-                    gameScore.url("score", texturl);
+                    gameScore.url("url", texturl);
                     gameScore.url("keyword", textkeyword);
                     gameScore.url("name", textname);
                     gameScore.url("ownnername", textowner);
