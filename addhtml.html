@@ -9,7 +9,7 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="bmob-min.js"></script>
     <script type="text/javascript">
-        $(document).on("pageload", function (event, data) {
+        $(document).on("load", function (event, data) {
             alert("触发 pageload 事件！\nURL: " + data.url);
             Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
         });
