@@ -17,8 +17,39 @@
         });
         window.onload=function(){
             //编写代码  alert("触发 dom 事件！\nURL: ");
-          
-           // alert("触发 window 事件！\nURL: ");
+            Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
+            // alert("触发 window 事件！\nURL: ");
+            var listweb = new Bmob.Query(websiteinfo);
+            listweb.find({
+                success: function (results) {
+                    var object, tmpdiv, tmpspan;
+                    $("#list").empty();
+                    $('#num').text(results.length);
+                    for (var i = 0; i < results.length; i++) {
+                        object = results[i];
+                        tmpdiv = document.createElement("div");
+                        $(tmpdiv).attr("class", "result");
+                        $("#list").append(tmpdiv);
+                        tmpspan = document.createElement("span");
+                        $(tmpspan).text(object.attributes.name)
+                        $(tmpspan).attr("class", "infname");
+                        $(tmpdiv).append(tmpspan).append("<br>");
+                        tmpspan = document.createElement("span");
+                        $(tmpspan).text("网址:" + object.attributes.url)
+                        $(tmpspan).attr("class", "infurl");
+                        $(tmpdiv).append(tmpspan).append("<br>");
+                        tmpspan = document.createElement("span");
+                        $(tmpspan).text("关键词:" + object.attributes.keyword)
+                        $(tmpspan).attr("class", "infkeyword");
+                        $(tmpdiv).append(tmpspan).append("<br>");
+                        //console.info("url:"+object.attributes.url+"/keyword:"+object.attributes.keyword+"/name:"+object.attributes.name+"/owner:"+object.attributes.ownnername+"/email:"+object.attributes.ownnemail);
+                    }
+                    $("#list").trigger('create');
+                },
+                error: function (error) {
+                    alert("查询失败: " + error.code + " " + error.message);
+                }
+            });
         }
 
         $(document).on("load", function (event, data) {
@@ -45,6 +76,37 @@
                     gameScore.save(null, {
                         success: function (object) {
                             alert("create object success, object id:" + object.id);
+                            var listweb = new Bmob.Query(websiteinfo);
+                            listweb.find({
+                                success: function (results) {
+                                    var object, tmpdiv, tmpspan;
+                                    $("#list").empty();
+                                    $('#num').text(results.length);
+                                    for (var i = 0; i < results.length; i++) {
+                                        object = results[i];
+                                        tmpdiv = document.createElement("div");
+                                        $(tmpdiv).attr("class", "result");
+                                        $("#list").append(tmpdiv);
+                                        tmpspan = document.createElement("span");
+                                        $(tmpspan).text(object.attributes.name)
+                                        $(tmpspan).attr("class", "infname");
+                                        $(tmpdiv).append(tmpspan).append("<br>");
+                                        tmpspan = document.createElement("span");
+                                        $(tmpspan).text("网址:" + object.attributes.url)
+                                        $(tmpspan).attr("class", "infurl");
+                                        $(tmpdiv).append(tmpspan).append("<br>");
+                                        tmpspan = document.createElement("span");
+                                        $(tmpspan).text("关键词:" + object.attributes.keyword)
+                                        $(tmpspan).attr("class", "infkeyword");
+                                        $(tmpdiv).append(tmpspan).append("<br>");
+                                        //console.info("url:"+object.attributes.url+"/keyword:"+object.attributes.keyword+"/name:"+object.attributes.name+"/owner:"+object.attributes.ownnername+"/email:"+object.attributes.ownnemail);
+                                    }
+                                    $("#list").trigger('create');
+                                },
+                                error: function (error) {
+                                    alert("查询失败: " + error.code + " " + error.message);
+                                }
+                            });
                         },
                         error: function (model, error) {
                             alert("create object fail");
