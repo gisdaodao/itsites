@@ -19,7 +19,10 @@
             //编写代码  alert("触发 dom 事件！\nURL: ");
             Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
             // alert("触发 window 事件！\nURL: ");
-            var listweb = new Bmob.Query(websiteinfo);
+            //  var listweb = new Bmob.Query(websiteinfo);
+            var GameScore = Bmob.Object.extend("websiteinfo");
+            // var query = new Bmob.Query(GameScore);
+            var listweb = new Bmob.Query(GameScore);
             listweb.find({
                 success: function (results) {
                     var object, tmpdiv, tmpspan;
@@ -75,8 +78,10 @@
                     gameScore.set("ownnemail", textownnerinfo);
                     gameScore.save(null, {
                         success: function (object) {
-                            alert("create object success, object id:" + object.id);
-                            var listweb = new Bmob.Query(websiteinfo);
+                           // alert("create object success, object id:" + object.id);
+                            var GameScore = Bmob.Object.extend("websiteinfo");
+                           // var query = new Bmob.Query(GameScore);
+                            var listweb = new Bmob.Query(GameScore);
                             listweb.find({
                                 success: function (results) {
                                     var object, tmpdiv, tmpspan;
