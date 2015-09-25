@@ -27,7 +27,6 @@
         $(document).ready(function () {
             $("#idbtnsubmit").bind("click",
                 function () {
-                   
                    // alert('我被点了');
                     var texturl = $("#textinput-url").val();
                     var textkeyword = $("#textinput-keyword").val();
@@ -37,11 +36,11 @@
                    // alert(texturl);
                     var websiteinfo = Bmob.Object.extend("websiteinfo");
                     var gameScore = new websiteinfo();
-                    gameScore.url("url", texturl);
-                    gameScore.url("keyword", textkeyword);
-                    gameScore.url("name", textname);
-                    gameScore.url("ownnername", textowner);
-                    gameScore.url("ownnemail", textownnerinfo);
+                    gameScore.set("url", texturl);
+                    gameScore.set("keyword", textkeyword);
+                    gameScore.set("name", textname);
+                    gameScore.set("ownnername", textowner);
+                    gameScore.set("ownnemail", textownnerinfo);
                     gameScore.save(null, {
                         success: function (object) {
                             alert("create object success, object id:" + object.id);
