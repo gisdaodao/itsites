@@ -78,7 +78,8 @@
                     gameScore.set("ownnemail", textownnerinfo);
                     gameScore.save(null, {
                         success: function (object) {
-                           // alert("create object success, object id:" + object.id);
+                            // alert("create object success, object id:" + object.id);
+                            Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
                             var GameScore = Bmob.Object.extend("websiteinfo");
                            // var query = new Bmob.Query(GameScore);
                             var listweb = new Bmob.Query(GameScore);
