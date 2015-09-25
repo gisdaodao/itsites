@@ -98,7 +98,8 @@
                                         $(tmpspan).attr("class", "infname");
                                         $(tmpdiv).append(tmpspan).append("<br>");
                                         tmpspan = document.createElement("span");
-                                        $(tmpspan).text("网址:" + object.attributes.url)
+                                        // $(tmpspan).text("网址:" + object.attributes.url)
+                                        $(tmpspan).text("<a href='" + object.attributes.url + "'>网址:" + object.attributes.url + "</a>")
                                         $(tmpspan).attr("class", "infurl");
                                         $(tmpdiv).append(tmpspan).append("<br>");
                                         tmpspan = document.createElement("span");
