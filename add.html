@@ -39,6 +39,7 @@
 					tmpli=document.createElement("li");
 					tmpa=document.createElement("a");
 					$(tmpa).attr("href",object.get("url")||"javascript:void(0);");
+					$(tmpa).attr("target","_blank");
 					dom1=document.createElement("h2");
 					$(dom1).text(object.get("name")||"站点未知");
 					$(tmpa).append(dom1);
