@@ -4,10 +4,11 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-		<!--<script src="./include/jquery-1.8.3.min.js"></script>
+		<!--<link rel="stylesheet" href="./include/jquery.mobile-1.4.5.min.css" />
+		<script src="./include/jquery-1.8.3.min.js"></script>
 		<script src="./include/jquery.mobile-1.4.5.min.js"></script>
 		<script src="./include/bmob-min.js"></script>-->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://gisdaodao.github.io/itsites/bmob-min.js"></script>
@@ -16,24 +17,25 @@
 				Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
 				var info=Bmob.Object.extend("test");
 				var o={};
-				o.lock=false;
-				o.update=0;
-				o.total=0;
-				o.page=0;
-				o.maxPage=0;
+				var lock=false,update=0,total=0;
+				o.maxPage=0;//提交锁，更新时间，结果数，最大页数
+				o.page=0;//当前页数
+
 				(function(obj){
 					var limit={}
 					obj.setLimit=function(x){
+						//设定条件时清除结果更新时间，结果数，最大页数，当前页数
 						limit=x;
-						obj.update=0;
-						obj.total=0;
-						obj.page=0;
+						update=0;
+						total=0;
 						obj.maxPage=0;
+						obj.page=0;
 					}
 					obj.getLimit=function(x){
 						return limit;
 					}
-				})(o)
+				})(o)//设定/获取限制条件函数
+
 				var buildItem=function(object){
 					var tmpli,tmpa,dom1,dom2;
 					tmpli=document.createElement("li");
@@ -54,31 +56,33 @@
 					$(dom1).text("关键词:"+object.get("keyword").join(","));
 					$(tmpa).append(dom1);
 					dom1=document.createElement("p");
-					$(dom1).attr("class","ui-li-aside");
+					//$(dom1).attr("class","ui-li-aside");
 					$(dom1).text(object.updatedAt);
 					$(tmpa).append(dom1);
 					$(tmpli).append(tmpa);
 					return tmpli;
-				};
-				o.addweb=function(data,sfun,efun){
-					var addweb = new info();
-					addweb.save(data, {
-						success:sfun,
-						error:efun
-					});
-				}
-				o.homeInfo=function(str){
+				};//生成条目对象
+
+				var homeInfo=function(str){
 					var dom=document.createElement("li");
 					$(dom).text(str);
 					$("#homeInfo").append(dom);
 					$("#home").page();
 					$("#homeInfo").listview("refresh");
-					location.href="#home";
-					o.lock=false;
-				}
+					$.mobile.changePage("#home");
+				}//主页通知
+
+				var resultInfo=function(str){
+					var dom=document.createElement("li");
+					$(dom).text(str);
+					$("#resultInfo").append(dom);
+					$("#result").page();
+					$("#resultInfo").listview("refresh");
+					$.mobile.changePage("#result");
+				}//结果页通知
 
 				var showpage=function(){
-					$("#result h2").text("第"+(o.page+1)+"页，总计"+(o.maxPage+1)+"页，"+(o.total)+"条记录")
+					$("#result h2").text("第"+(o.page+1)+"页，总计"+(o.maxPage+1)+"页，"+(total)+"条记录")
 					if(o.page==0){
 						$("#firstPage").attr("disabled","disabled");
 						$("#prevPage").attr("disabled","disabled");
@@ -93,21 +97,48 @@
 						$("#nextPage").removeAttr("disabled");
 						$("#lastPage").removeAttr("disabled");
 					}
-				};
+				};//结果页页码信息
+
+				o.addweb=function(){
+					if(lock)return;
+					lock=true;
+					var i;
+					//生成网站信息对象
+					var data={};
+					data.name=$("#add-name").val();
+					data.url="http://"+$("#add-url").val().replace(/.*\/\//,"");
+					tmpkey={};
+					$("input[type='checkbox'][name='add-keyword']:checked").each(function(){tmpkey[this.value.replace(/\s/g,"")]=1;});
+					$($("input[type='text'][name='add-keyword']").val().replace(/\s/g,"").split(",")).each(function(k,v){tmpkey[v]=1;});
+					data.keyword=[];
+					for(i in tmpkey)if(i!="")data.keyword.push(i);
+					tmpkey=null;
+					data.type=$("input[type='radio'][name='add-type']:checked").val()||""; 
+					data.author=$("#add-author").val();
+					data.email=$("#add-email").val();
+					//添加网站
+					var addweb = new info();
+					addweb.save(data, {
+						success:function(){homeInfo("添加成功");lock=false;},
+						error:function(){homeInfo("添加失败");lock=false;}
+					});
+				}
+
 				o.findweb=function(){
-					var findquery = new Bmob.Query(info);
-					location.href="#result";
+					//设定网站限制
+					var findquery = new Bmob.Query(info)
 					var limit=o.getLimit();
 					findquery.ascending("name");
 					if(typeof limit.type != "undefined"&& limit.type.length>0)findquery.containedIn("type", limit.type);
 					if(typeof limit.name!="undefined"&&limit.name!="")findquery.contains("name", limit.name);
 					if(typeof limit.keyword != "undefined"&&limit.keyword!="")findquery.containsAll("keyword", limit.keyword);
+					//超出30秒则更新结果数
 					var d = new Date()
-					if(d.getTime()-o.update>30*1000){
+					if(d.getTime()-update>30*1000){
 						findquery.count({
 							success: function(count) {
-								o.total=count;
-								o.update=d.getTime();
+								total=count;
+								update=d.getTime();
 								o.maxPage=(count-count%8)/8;
 								showpage();
 							},
@@ -121,8 +152,10 @@
 					}else{
 						showpage();
 					}
+					//每页8条
 					findquery.limit(8);
 					findquery.skip(8*o.page);
+					//查找网页
 					var i;
 					findquery.find({
 						success: function(results) {
@@ -134,10 +167,13 @@
 							$("#resultList").listview("refresh");
 						},
 						error: function(error) {
-							bmobTool.homeInfo("查找失败");
+							resultInfo("查找失败");
 						}
 					});
+					$.mobile.changePage("#result");
 				};
+
+				//显示首页网站
 				o.listweb=function(){
 					var findquery = new Bmob.Query(info);
 					var i;
@@ -153,7 +189,7 @@
 							$("#homeList").listview("refresh");
 						},
 						error: function(error) {
-							bmobTool.homeInfo("查找失败");
+							homeInfo("查找失败");
 						}
 					});
 				}
@@ -164,7 +200,7 @@
 	</head>
 	<body>
 		
-<!--***-->
+<!--首页-->
 		<div data-role="page" id="home" >
 			<div data-role="header" data-position="fixed"  >
 				<h1>程序员小站</h1>
@@ -193,13 +229,13 @@
 			</div>
 		</div> 
 		<script>
-			bmobTool.listweb();
+			$(document).on("pagebeforeshow","#home",bmobTool.listweb);
 			$("#moreweb").bind("click",function(){
 				bmobTool.setLimit({});
 				bmobTool.findweb();
 			});
 		</script>
-<!--***-->
+<!--结果页-->
 		<div data-role="page" id="result">
 			<div data-role="header" data-position="fixed" >
 				<h1>程序员小站</h1>
@@ -208,8 +244,8 @@
 
 			<div data-role="content">
 				<h2></h2>
-				<ul data-role="listview" data-inset="true" id="resultList">
-				</ul>
+				<ul data-role="listview" data-inset="true" id="resultInfo"></ul>
+				<ul data-role="listview" data-inset="true" id="resultList"></ul>
 				<div data-role="navbar">
 					<ul>
 						<li><button data-icon="arrow-l" id="firstPage">首页</button></li>
@@ -258,7 +294,7 @@
 			});
 		</script>
 		
-<!--***-->
+<!--添加页-->
 		<div data-role="page" id="add">
 			<div data-role="header" data-position="fixed" >
 				<h1>程序员小站</h1>
@@ -315,26 +351,11 @@
 		</div> 
 		<script>
 			$("#addweb").bind("click",function(){
-				if(bmobTool.lock)return;
-				bmobTool.lock=true;
-				var i;
-				var data={};
-				data.name=$("#add-name").val();
-				data.url="http://"+$("#add-url").val().replace(/.*\/\//,"");
-				tmpkey={};
-				$("input[type='checkbox'][name='add-keyword']:checked").each(function(){tmpkey[this.value.replace(/\s/g,"")]=1;});
-				$($("input[type='text'][name='add-keyword']").val().replace(/\s/g,"").split(",")).each(function(k,v){tmpkey[v]=1;});
-				data.keyword=[];
-				for(i in tmpkey)if(i!="")data.keyword.push(i);
-				tmpkey=null;
-				data.type=$("input[type='radio'][name='add-type']:checked").val()||""; 
-				data.author=$("#add-author").val();
-				data.email=$("#add-email").val();
-				bmobTool.addweb(data,function(){bmobTool.homeInfo("添加成功");},function(){bmobTool.homeInfo("添加失败");})
+				bmobTool.addweb();
 			});
 		</script>
 
-<!--***-->
+<!--搜索页-->
 		<div data-role="page" id="search">
 			<div data-role="header" data-position="fixed" >
 				<h1>程序员小站</h1>
@@ -389,7 +410,7 @@
 			});
 		</script>
 		
-<!--***-->
+<!--关于-->
 		<div data-role="page" id="about">
 			<div data-role="header" data-position="fixed" >
 				<h1>程序员小站</h1>
@@ -397,8 +418,8 @@
 			</div>
 
 			<div data-role="content">
+						<h2>qq群:425071394</h2>
 					<a href="http://gisdaodao.github.io/itsites/ViewPagerbroswer.apk"  data-role="button">点击下载android 客户端</a>
-                    <span  data-role="button">qq群:425071394</span>
 					<div class="jiathis_style_32x32">
 						<a class="jiathis_button_qzone"></a>
 						<a class="jiathis_button_tsina" ></a>
