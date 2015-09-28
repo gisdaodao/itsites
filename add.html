@@ -231,7 +231,7 @@
 			</div>
 		</div> 
 		<script>
-			$(document).on("pagebeforeshow","#home",bmobTool.listweb);
+			$(document).on("pageload","#home",bmobTool.listweb);
 			$("#moreweb").bind("click",function(){
 				bmobTool.setLimit({});
 				bmobTool.findweb();
