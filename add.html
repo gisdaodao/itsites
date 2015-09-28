@@ -175,6 +175,8 @@
 
 				//显示首页网站
 				o.listweb=function(){
+					alert("pagebeforeshow event fired - pagetwo is about to be shown");
+					Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
 					var findquery = new Bmob.Query(info);
 					var i;
 					findquery.descending("updatedAt");
