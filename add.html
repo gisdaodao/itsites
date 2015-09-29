@@ -116,11 +116,11 @@
 					data.type=$("input[type='radio'][name='add-type']:checked").val()||""; 
 					data.author=$("#add-author").val();
 					data.email=$("#add-email").val();
-					//添加网站
+					//分享网站
 					var addweb = new info();
 					addweb.save(data, {
-						success:function(){homeInfo("添加成功");lock=false;},
-						error:function(){homeInfo("添加失败");lock=false;}
+						success:function(){homeInfo("分享成功");lock=false;},
+						error:function(){homeInfo("分享失败");lock=false;}
 					});
 				}
 
@@ -222,7 +222,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home" class="ui-btn-active  ui-state-persist">主页</a></li>
-						<li><a href="#add" data-icon="plus" data-transition="slide">添加</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slide">分享</a></li>
 						<li><a href="#about" data-icon="info" data-transition="slide">关于</a></li>
 					</ul>
 				</div>
@@ -261,7 +261,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home" >主页</a></li>
-						<li><a href="#add" data-icon="plus" >添加</a></li>
+						<li><a href="#add" data-icon="plus" >分享</a></li>
 						<li><a href="#about" data-icon="info" >关于</a></li>
 					</ul>
 				</div>
@@ -294,7 +294,7 @@
 			});
 		</script>
 		
-<!--添加页-->
+<!--页-->
 		<div data-role="page" id="add">
 			<div data-role="header" data-position="fixed" >
 				<h1>程序员小站</h1>
@@ -343,7 +343,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">主页</a></li>
-						<li><a href="#add" data-icon="plus" class="ui-btn-active  ui-state-persist">添加</a></li>
+						<li><a href="#add" data-icon="plus" class="ui-btn-active  ui-state-persist">分享</a></li>
 						<li><a href="#about" data-icon="info" data-transition="slide">关于</a></li>
 					</ul>
 				</div>
@@ -392,7 +392,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home" >主页</a></li>
-						<li><a href="#add" data-icon="plus" >添加</a></li>
+						<li><a href="#add" data-icon="plus" ></a></li>
 						<li><a href="#about" data-icon="info" >关于</a></li>
 					</ul>
 				</div>
@@ -436,7 +436,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">主页</a></li>
-						<li><a href="#add" data-icon="plus" data-transition="slide" data-direction="reverse">添加</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slide" data-direction="reverse"></a></li>
 						<li><a href="#about" data-icon="info"  class="ui-btn-active  ui-state-persist">关于</a></li>
 					</ul>
 				</div>
