@@ -53,19 +53,8 @@
 					$(tmpa).append(dom1);
 					//$(tmpa).append("<br>");
 					dom1=document.createElement("p");
-					$(dom1).text("关键词:");
+					$(dom1).text("关键词:"+object.get("keyword").join(","));
 					$(tmpa).append(dom1);
-					for(var i=0;i<object.get("keyword").length;i++){
-						dom2=document.createElement("a")
-						dom2.onclick=function(){return false};
-						$(dom2).text(object.get("keyword")[i]).attr({'class':"ui-li-count"}).css({"position":"static","padding":".2em .5em"});
-						$(dom1).append(dom2);
-						$(dom2).bind("click",(function(k){return function(e){
-							e.stopPropagation();
-							o.setLimit({"keyword":[k]});
-							o.findweb();
-						}})(object.get("keyword")[i]));
-					}
 					dom1=document.createElement("p");
 					//$(dom1).attr("class","ui-li-aside");
 					$(dom1).text(object.updatedAt);
