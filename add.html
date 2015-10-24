@@ -461,21 +461,25 @@ $(function () {
 			<div data-role="content">
 
 
-                <div class="search">
+               
+                    <div class="ui-block-f" style="border:0px">
+                    	<div class="ui-block-a">
+                    	 <div class="search">
                     <form id="form" action="http://www.baidu.com/s" target="_blank" method="get" accept-charset="utf-8">
                         <input type="text" name="wd" id="searchText" autocomplete="off" data-role="none"/>
                     	<input style="width:70px;" type="submit" value="百度" id="btnSearch" data-role="none"/>
                         <div id="auto">
                         </div>
                     </form>
-                    <div class="ui-block-e" style="border: 1px solid black;">
-                    	<div class="ui-block-a" style="border: 0px">  <input type="submit"  onclick="sougou()"  value="搜狗"></div>
-     <div class="ui-block-b" style="border: 0px ">  <input type="submit"  onclick="three360()"  value="360"></div>
-     <div class="ui-block-c" style="border: 0px ">  <input type="submit"  onclick="bing()"  value="bing"></div>
-     <div class="ui-block-d" style="border: 0px ">  <input type="submit"  onclick="google()"  value="google"></div>
-     <div class="ui-block-e" style="border: 0px ">  <input type="submit"  onclick="googlechina()"  value="google中国"></div>
+                      </div>
+                      </div>
+                    	<div class="ui-block-b" style="border: 0px">  <input type="submit"  onclick="sougou()"  value="搜狗"></div>
+     <div class="ui-block-c" style="border: 0px ">  <input type="submit"  onclick="three360()"  value="360"></div>
+     <div class="ui-block-d" style="border: 0px ">  <input type="submit"  onclick="bing()"  value="bing"></div>
+     <div class="ui-block-e" style="border: 0px ">  <input type="submit"  onclick="google()"  value="google"></div>
+     <div class="ui-block-f" style="border: 0px ">  <input type="submit"  onclick="googlechina()"  value="google中国"></div>
                  
-                </div>
+              
 				<ul data-role="listview" data-inset="true" id="homeInfo"></ul>
 				
 				<div data-role="collapsible" data-collapsed="false" >
