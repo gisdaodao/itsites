@@ -459,7 +459,24 @@ $(function () {
 				<a href="#search" data-role="button" class="ui-btn-right" data-icon="search" >搜索</a>
 			</div>
 			<div data-role="content">
-
+   <div class="ui-block-e" style="border:0px">
+                    	<div class="ui-block-a">
+                    	 <div class="search">
+                    <form id="form" action="http://www.baidu.com/s" target="_blank" method="get" accept-charset="utf-8">
+                        <input type="text" name="wd" id="searchText" autocomplete="off" data-role="none" style="float:left" />
+                    	<input type="submit" value="百度" id="btnSearch" style="float:left"/>
+                        <div id="auto">
+                        </div>
+                    </form>
+                      </div>
+                      </div>
+                    	<div class="ui-block-b" style="border: 0px">  <input type="submit"  onclick="sougou()"  value="搜狗"></div>
+   
+     <div class="ui-block-c" style="border: 0px ">  <input type="submit"  onclick="bing()"  value="bing"></div>
+     <div class="ui-block-d" style="border: 0px ">  <input type="submit"  onclick="google()"  value="google"></div>
+     <div class="ui-block-e" style="border: 0px ">  <input type="submit"  onclick="googlechina()"  value="google中国">
+     </div>
+                 
 
                
                  
