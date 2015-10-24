@@ -44,6 +44,26 @@ function sougou() {
     var strdomin = $("#searchText").val();
     var TEMP = window.open("http://www.sogou.com/web?query=" + strdomin);
 }
+function three360() {
+    //获取用户输入的关键字
+    var strdomin = $("#searchText").val();
+    var TEMP = window.open("http://www.haosou.com/s?q=" + strdomin);
+}
+function bing() {
+    //获取用户输入的关键字
+    var strdomin = $("#searchText").val();
+    var TEMP = window.open("http://global.bing.com/search?q=" + strdomin);
+}
+function google() {
+    //获取用户输入的关键字
+    var strdomin = $("#searchText").val();
+    var TEMP = window.open("https://www.google.com/#&q=" + strdomin);
+}
+function googlechina() {
+    //获取用户输入的关键字
+    var strdomin = $("#searchText").val();
+    var TEMP = window.open("https://www.google.com.hk/#&q=" + strdomin);
+}
 function FillUrls() {
     //获取用户输入的关键字
     var strdomin = $("#searchText").val()
@@ -449,6 +469,13 @@ $(function () {
                         <div id="auto">
                         </div>
                     </form>
+                    <div class="ui-block-e" style="border: 1px solid black;">
+                    	<div class="ui-block-a" style="border: 1px solid black;">  <input type="submit"  onclick="sougou()"  value="搜狗"></div>
+     <div class="ui-block-b" style="border: 1px solid black;">  <input type="submit"  onclick="three360()"  value="360"></div>
+     <div class="ui-block-c" style="border: 1px solid black;">  <input type="submit"  onclick="bing()"  value="bing"></div>
+     <div class="ui-block-d" style="border: 1px solid black;">  <input type="submit"  onclick="google()"  value="google"></div>
+     <div class="ui-block-e" style="border: 1px solid black;">  <input type="submit"  onclick="googlechina()"  value="google中国"></div>
+                    /div>
                          <input type="submit"  onclick="sougou()"  value="搜狗">
                 </div>
 				<ul data-role="listview" data-inset="true" id="homeInfo"></ul>
