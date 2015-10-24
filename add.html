@@ -39,7 +39,11 @@ div.search input.but{
     </style>
     <script>
 var changeStr = '';   //初始化一个
-
+function sougou() {
+    //获取用户输入的关键字
+    var strdomin = $("#searchText").val();
+    var TEMP = window.open("https://www.sogou.com/web?query=" + strdomin);
+}
 function FillUrls() {
     //获取用户输入的关键字
     var strdomin = $("#searchText").val()
@@ -445,6 +449,7 @@ $(function () {
                         <div id="auto">
                         </div>
                     </form>
+                         <input type="button"  onclick="sougou"  value="搜狗">
                 </div>
 				<ul data-role="listview" data-inset="true" id="homeInfo"></ul>
 				
