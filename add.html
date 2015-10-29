@@ -45,32 +45,32 @@ div.search input.but{
         }
 function sougou() {
     //获取用户输入的关键字
-    var strdomin = $("#searchText").val();
+    var strdomin = $("#Text1").val();
     var TEMP = window.open("http://www.sogou.com/web?query=" + strdomin);
 }
 function three360() {
     //获取用户输入的关键字
-    var strdomin = $("#searchText").val();
+    var strdomin = $("#Text1").val();
     var TEMP = window.open("http://www.haosou.com/s?q=" + strdomin);
 }
 function bing() {
     //获取用户输入的关键字
-    var strdomin = $("#searchText").val();
+    var strdomin = $("#Text1").val();
     var TEMP = window.open("http://global.bing.com/search?q=" + strdomin);
 }
 function google() {
     //获取用户输入的关键字
-    var strdomin = $("#searchText").val();
+    var strdomin = $("#Text1").val();
     var TEMP = window.open("https://www.google.com/#&q=" + strdomin);
 }
 function googlechina() {
     //获取用户输入的关键字
-    var strdomin = $("#searchText").val();
+    var strdomin = $("#Text1").val();
     var TEMP = window.open("https://www.google.com.hk/#&q=" + strdomin);
 }
 function FillUrls() {
     //获取用户输入的关键字
-    var strdomin = $("#searchText").val()
+    var strdomin = $("#Text1").val()
 
     //如果请求为空的话就不进行请求
     if (strdomin == null || strdomin == "") {
