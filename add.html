@@ -904,7 +904,7 @@ $(function () {
                              <li><a href="http://gisdaodao.github.io/itsites/lecture/20151024扎克伯格清华中文演讲.html">20151024扎克伯格清华中文演讲</a></li>                                                     
                             <li><a href="http://gisdaodao.github.io/itsites/lecture/20150518库克在美国乔治华盛顿大学发表了演讲.html">20150518库克在美国乔治华盛顿大学发表了演讲</a></li>
                               <li><a href="http://edu.sina.com.cn/en/2015-01-21/180787227.shtml">2014经典演讲之比尔盖茨斯坦福演讲(双语)</a></li>
-                           
+                              <li><a href="#articlelit" data-icon="info" data-transition="slide">文章列表</a></li>
                         </ul>           
                     </div>
             
@@ -915,11 +915,65 @@ $(function () {
 						<li><a href="#home" data-icon="home" >主页</a></li>
 						<li><a href="#add" data-icon="plus" >分享</a></li>
                        <li><a href="#doconline" data-icon="info" data-transition="slide">在线文档</a></li>
-                          <li><a href="#speech" data-icon="info" data-transition="slide">演讲</a></li>
+                          <li><a href="#articlelit" data-icon="info" data-transition="slide">文章列表</a></li>
 					</ul>
 				</div>
 			</div>
         </div>
+ <div data-role="page" id="articlelit">
+        <div data-role="header" data-position="fixed">
+            <h1>程序员小站</h1>
+            <a href="#search" data-role="button" class="ui-btn-right" data-icon="search">搜索</a>
+        </div>
+        <div data-role="content">
+            <div class="ui-grid-a">
+                <div class="ui-block-a">  <input type="button" value="软件"></div>
+                <div class="ui-block-b">  <input type="button" value="硬件"></div>
+            </div>
+            <div data-role="collapsible">
+                <h5>语言</h5>
+                <fieldset data-role="controlgroup" data-type="horizontal">
 
+                    <input type="radio" name="favoritecolor" id="favoritecolora1" value="c#">
+                    <label for="favoritecolora1">c#</label>
+
+                    <input type="radio" name="favoritecolor" id="favoritecolora2" value="java">
+                    <label for="favoritecolora2">java</label>
+
+                    <input type="radio" name="favoritecolor" id="favoritecolora3" value="c++">
+                    <label for="favoritecolora3">c++</label>
+                    <input type="radio" name="favoritecolor" id="favoritecolora4" value="oc">
+                    <label for="favoritecolora4">oc</label>
+                    <input type="radio" name="favoritecolor" id="favoritecolora5" value="c">
+                    <label for="favoritecolora5">c</label>
+                    <input type="radio" name="favoritecolor" id="favoritecolora6" value="python">
+                    <label for="favoritecolora6">python</label>
+                    <input type="radio" name="favoritecolor" id="favoritecolora7" value="php">
+                    <label for="favoritecolora7">php</label>
+                    <input type="radio" name="favoritecolor" id="favoritecolora8" value="javascript">
+                    <label for="favoritecolora8">javascript</label>
+                    <input type="radio" name="favoritecolor" id="favoritecolora9" value="sql">
+                    <label for="favoritecolora9">sql</label>
+                    <input type="radio" name="favoritecolor" id="favoritecolora10" value="vb">
+                    <label for="favoritecolora10">vb</label>
+                    <input type="radio" name="favoritecolor" id="favoritecolora11" value="ruby">
+                    <label for="favoritecolora11">ruby</label>
+
+                </fieldset>
+            </div>
+            <ul data-role="listview" data-inset="false" id="articleList"></ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#frequentlyuusedsites" data-icon="home">常用</a></li>
+                    <li><a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">主页</a></li>
+                    <li><a href="#add" data-icon="plus" class="ui-btn-active  ui-state-persist">分享</a></li>
+                    <li><a href="#about" data-icon="info" data-transition="slide">这人多</a></li>
+                    <li><a href="#addarticle" data-icon="info" data-transition="slide">提交文章</a></li>                           <
+                </ul>
+            </div>
+        </div>
+    </div> 
 	</body>
 	</html>
