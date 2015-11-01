@@ -262,6 +262,7 @@ $(function () {
 			var bmobTool=(function(){
 				Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
 				var info=Bmob.Object.extend("test");
+			        var articleinfo=Bmob.Object.extend("articlelittable");
 				var o={};
 				var lock=false,update=0,total=0;
 				o.maxPage=0;//提交锁，更新时间，结果数，最大页数
@@ -380,7 +381,29 @@ $(function () {
 						error:function(){homeInfo("分享失败");lock=false;}
 					});
 				}
-
+                                 o.addarticle=function(){
+					if(lock)return;
+					lock=true;
+					var i;
+					//生成网站信息对象
+					var articledata={};
+					articledata.articletitle=$("#add-articlename").val();
+					articledata.articleurl="http://"+$("#add-articleurl").val().replace(/.*\/\//,"");
+					tmpkey={};
+					$("input[type='checkbox'][name='articlekeyword']:checked").each(function(){tmpkey[this.value.replace(/\s/g,"")]=1;});
+					$($("input[type='text'][name='articlekeyword']").val().replace(/\s/g,"").split(",")).each(function(k,v){tmpkey[v]=1;});
+					articledata.keyword=[];
+					for(i in tmpkey)if(i!="")data.keyword.push(i);
+					tmpkey=null;
+					articledata.codelanguage=$("input[type='radio'][name='favoritecolor']:checked").val()||""; 
+				
+					//分享文章
+					var addarticle = new articleinfo();
+					addarticle.save(articledata, {
+						success:function(){homeInfo("分享成功");lock=false;},
+						error:function(){homeInfo("分享失败");lock=false;}
+					});
+				}
 				o.findweb=function(){
 					//设定网站限制
 					var findquery = new Bmob.Query(info)
@@ -647,10 +670,10 @@ $(function () {
 							<label for="add-key-articlefrontend">软件</label>
 							<input type="checkbox" name="add-articlekeyword" id="add-key-articlefrontend" value="软件">
 							<label for="add-key-articlebackend">硬件</label>
-							<input type="checkbox" name="add-keyword" id="add-key-articlebackend" value="硬件">
+							<input type="checkbox" name="add-articlekeyword" id="add-key-articlebackend" value="硬件">
 					</fieldset>
 					<label for="add-keyword"  class=""></label>
-					<input type="text" name="add-keyword" id="add-key-other" value="" placeholder="其他关键词，以英文逗号分割...">
+					<input type="text" name="add-articlekeyword" id="add-key-other" value="" placeholder="其他关键词，以英文逗号分割...">
  <fieldset data-role="controlgroup" data-type="horizontal">  
                 <legend>语言:</legend>  
   
