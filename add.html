@@ -390,10 +390,8 @@ $(function () {
 					articledata.articletitle=$("#add-articlename").val();
 					articledata.articleurl="http://"+$("#add-articleurl").val().replace(/.*\/\//,"");
 					tmpkey={};
-					$("input[type='checkbox'][name='articlekeyword']:checked").each(function(){tmpkey[this.value.replace(/\s/g,"")]=1;});
-					$($("input[type='text'][name='articlekeyword']").val().replace(/\s/g,"").split(",")).each(function(k,v){tmpkey[v]=1;});
 					articledata.keyword=[];
-					for(i in tmpkey)if(i!="")data.keyword.push(i);
+					for(i in tmpkey)if(i!="")articledata.keyword.push(i);
 					tmpkey=null;
 					articledata.codelanguage=$("input[type='radio'][name='favoritecolor']:checked").val()||""; 
 				
