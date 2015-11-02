@@ -262,7 +262,7 @@ $(function () {
 			var bmobTool=(function(){
 				Bmob.initialize("39dfc34280e39b5411c3e450466da0f2", "4b59ff42a72875986c89551344a2b218");
 				var info=Bmob.Object.extend("test");
-			        var articleinfo=Bmob.Object.extend("articlelittable");
+			        var articleinfo=Bmob.Object.extend("articlelisttable");
 				var o={};
 				var lock=false,update=0,total=0;
 				o.maxPage=0;//提交锁，更新时间，结果数，最大页数
@@ -390,6 +390,8 @@ $(function () {
 					articledata.articletitle=$("#add-articlename").val();
 					articledata.articleurl="http://"+$("#add-articleurl").val().replace(/.*\/\//,"");
 					tmpkey={};
+				$("input[type='checkbox'][name='add-keyword']:checked").each(function(){tmpkey[this.value.replace(/\s/g,"")]=1;});
+				articledata.articletype=tmpkey;
 					articledata.keyword=[];
 					for(i in tmpkey)if(i!="")articledata.keyword.push(i);
 					tmpkey=null;
