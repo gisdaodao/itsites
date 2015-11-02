@@ -390,11 +390,13 @@ $(function () {
 					articledata.articletitle=$("#add-articlename").val();
 					articledata.articleurl="http://"+$("#add-articleurl").val().replace(/.*\/\//,"");
 					tmpkey={};
-				$("input[type='checkbox'][name='add-keyword']:checked").each(function(){tmpkey[this.value.replace(/\s/g,"")]=1;});
+				$("input[type='checkbox'][name='add-articlekeyword']:checked").each(function(){tmpkey[this.value.replace(/\s/g,"")]=1;});
 				articledata.articletype=tmpkey;
-					articledata.keyword=[];
+				keyword={};
 					for(i in tmpkey)if(i!="")articledata.keyword.push(i);
+					articledata.keyword=keyword;
 					tmpkey=null;
+					keyword=null;
 					articledata.codelanguage=$("input[type='radio'][name='favoritecolor']:checked").val()||""; 
 				
 					//分享文章
