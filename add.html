@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 	<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -458,6 +458,64 @@ $(function () {
 					});
 					$.mobile.changePage("#result");
 				};
+				o.findarticle=function(){
+					//设定网站限制
+					var findquery = new Bmob.Query(articleinfo)
+					var limit=o.getLimit();
+					findquery.ascending("articletitle");
+					if(limit.codelanguage)findquery.equalTo("codelanguage", limit.codelanguage);
+					findquery.containsAll("articletype", [limit.articletype]);
+					//超出30秒则更新结果数
+					var i;
+					findquery.find({
+						success: function(results) {
+							$("#articleList").empty();
+							for (i = 0; i < results.length; i++) {
+								$("#articleList").append(buildArticleItem(results[i]));
+							}
+							$("#articlelit").page();
+							$("#articleList").listview("refresh");
+						},
+						error: function(error) {
+							resultInfo("查找失败");
+						}
+					});
+					$.mobile.changePage("#articlelit");
+				};
+				var buildArticleItem=function(object){
+					var tmpli,tmpa,dom1,dom2;
+					tmpli=document.createElement("li");
+					tmpa=document.createElement("a");
+					$(tmpa).attr("href",object.get("articleurl")||"javascript:void(0);");
+					$(tmpa).attr("target","_blank");
+					dom1=document.createElement("h2");
+					$(dom1).text(object.get("articletitle")||"站点未知");
+					$(tmpa).append(dom1);
+					dom1=document.createElement("p");
+					dom2=document.createElement("b");
+					$(dom2).text("网址:"+object.get("articleurl"));
+					//$(dom2).text("作者:"+object.get("author"));
+					$(dom1).append(dom2);
+					$(tmpa).append(dom1);
+					//$(tmpa).append("<br>");
+					dom1=document.createElement("p");
+					$(dom1).text("关键词:");
+					$(tmpa).append(dom1);
+					if(object.get("keyword")!=undefined){
+						for(var i=0;i<object.get("keyword").length;i++){
+							dom2=document.createElement("a")
+							dom2.onclick=function(){return false};
+							$(dom2).text(object.get("keyword")[i]).attr({'class':"ui-li-count"}).css({"position":"static","padding":".2em .5em"});
+							$(dom1).append(dom2);;
+						}
+					}
+					dom1=document.createElement("p");
+					//$(dom1).attr("class","ui-li-aside");
+					$(dom1).text(object.updatedAt);
+					$(tmpa).append(dom1);
+					$(tmpli).append(tmpa);
+					return tmpli;
+				};//生成条目对象
 
 				//显示首页网站
 				o.listweb=function(){
@@ -964,41 +1022,39 @@ $(function () {
         </div>
         <div data-role="content">
             <div class="ui-grid-a">
-                <div class="ui-block-a">  <input type="button" value="软件"></div>
-                <div class="ui-block-b">  <input type="button" value="硬件"></div>
+                <div class="ui-block-a">  <input type="button" value="软件" onclick="findSoft()"></div>
+                <div class="ui-block-b">  <input type="button" value="硬件" onclick="findHard()"></div>
             </div>
             <div data-role="collapsible">
                 <h5>语言</h5>
-                <fieldset data-role="controlgroup" data-type="horizontal">
+                <fieldset data-role="controlgroup" data-type="horizontal" id="favoritecolor1">
 
-                    <input type="radio" name="favoritecolor" id="favoritecolora1" value="c#">
+                    <input type="radio" name="favoritecolor1" id="favoritecolora1" value="c#">
                     <label for="favoritecolora1">c#</label>
-
-                    <input type="radio" name="favoritecolor" id="favoritecolora2" value="java">
+                    <input type="radio" name="favoritecolor1" id="favoritecolora2" value="java">
                     <label for="favoritecolora2">java</label>
-
-                    <input type="radio" name="favoritecolor" id="favoritecolora3" value="c++">
+                    <input type="radio" name="favoritecolor1" id="favoritecolora3" value="c++">
                     <label for="favoritecolora3">c++</label>
-                    <input type="radio" name="favoritecolor" id="favoritecolora4" value="oc">
+                    <input type="radio" name="favoritecolor1" id="favoritecolora4" value="oc">
                     <label for="favoritecolora4">oc</label>
-                    <input type="radio" name="favoritecolor" id="favoritecolora5" value="c">
+                    <input type="radio" name="favoritecolor1" id="favoritecolora5" value="c">
                     <label for="favoritecolora5">c</label>
-                    <input type="radio" name="favoritecolor" id="favoritecolora6" value="python">
+                    <input type="radio" name="favoritecolor1" id="favoritecolora6" value="python">
                     <label for="favoritecolora6">python</label>
-                    <input type="radio" name="favoritecolor" id="favoritecolora7" value="php">
+                    <input type="radio" name="favoritecolor1" id="favoritecolora7" value="php">
                     <label for="favoritecolora7">php</label>
-                    <input type="radio" name="favoritecolor" id="favoritecolora8" value="javascript">
+                    <input type="radio" name="favoritecolor1" id="favoritecolora8" value="javascript">
                     <label for="favoritecolora8">javascript</label>
-                    <input type="radio" name="favoritecolor" id="favoritecolora9" value="sql">
+                    <input type="radio" name="favoritecolor1" id="favoritecolora9" value="sql">
                     <label for="favoritecolora9">sql</label>
-                    <input type="radio" name="favoritecolor" id="favoritecolora10" value="vb">
+                    <input type="radio" name="favoritecolor1" id="favoritecolora10" value="vb">
                     <label for="favoritecolora10">vb</label>
-                    <input type="radio" name="favoritecolor" id="favoritecolora11" value="ruby">
+                    <input type="radio" name="favoritecolor1" id="favoritecolora11" value="ruby">
                     <label for="favoritecolora11">ruby</label>
 
                 </fieldset>
             </div>
-            <ul data-role="listview" data-inset="false" id="articleList"></ul>
+            <ul data-role="listview" data-inset="true" id="articleList"></ul>
         </div>
         <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
@@ -1012,5 +1068,20 @@ $(function () {
             </div>
         </div>
     </div> 
+	<script>
+	function findSoft(){
+				var data={};
+				data.articletype="软件"
+				if($('#favoritecolor1 .ui-radio-on').text()!="")data.codelanguage=$('#favoritecolor1 .ui-radio-on').text();
+				bmobTool.setLimit(data);
+				bmobTool.findarticle();
+			}
+	function findHard(){
+				var data={};
+				data.articletype="硬件"
+				bmobTool.setLimit(data);
+				bmobTool.findarticle();
+			}
+	</script>
 	</body>
 	</html>
