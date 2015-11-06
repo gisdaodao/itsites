@@ -72,7 +72,7 @@ function FillUrls() {
     //获取用户输入的关键字
     var strdomin = $("#Text1").val()
 
-    //如果请求为空的话就不进行请求
+    //如果请求为空的话就不进行请求b
     if (strdomin == null || strdomin == "") {
         $("#auto").empty();
         $("#auto").hide();
@@ -499,10 +499,10 @@ $(function () {
 					$(dom1).text(object.get("articletitle")||"站点未知");
 					$(tmpa).append(dom1);
 					dom1=document.createElement("p");
-					dom2=document.createElement("b");
-					$(dom2).text("网址:"+object.get("articleurl"));
+				//	dom2=document.createElement("b");
+				//	$(dom2).text("网址:"+object.get("articleurl"));
 					//$(dom2).text("作者:"+object.get("author"));
-					$(dom1).append(dom2);
+				//	$(dom1).append(dom2);
 					$(tmpa).append(dom1);
 					//$(tmpa).append("<br>");
 					dom1=document.createElement("p");
@@ -516,10 +516,10 @@ $(function () {
 							$(dom1).append(dom2);;
 						}
 					}
-					dom1=document.createElement("p");
+					//dom1=document.createElement("p");
 					//$(dom1).attr("class","ui-li-aside");
-					$(dom1).text(object.updatedAt);
-					$(tmpa).append(dom1);
+					//$(dom1).text(object.updatedAt);
+				//	$(tmpa).append(dom1);
 					$(tmpli).append(tmpa);
 					return tmpli;
 				};//生成条目对象
