@@ -1098,12 +1098,15 @@ $(function () {
 				bmobTool.setLimit(codedata);
 				bmobTool.findarticle();
  });
-$(document).on("pageload",function(event,data){
+ $(document).on("pageinit","#articlelit",function(){
 	var data={};
 				data.articletype="软件"
 				if($('#favoritecolor1 .ui-radio-on').text()!="")data.codelanguage=$('#favoritecolor1 .ui-radio-on').text();
 				bmobTool.setLimit(data);
 				bmobTool.findarticle();
+});
+$(document).on("pageload",function(event,data){
+
 });
 	</script>
 	</body>
