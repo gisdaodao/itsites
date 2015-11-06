@@ -1090,14 +1090,14 @@ $(function () {
 				bmobTool.setLimit(data);
 				bmobTool.findarticle();
 			}
-			$(function(){
- $("input[type='radio']").bind("change",function(event,ui){
-  	var data={};
+		
+ $("input[type='radio'][name='favoritecolor1']").bind("change",function(event,ui){
+                         	var data={};
 				data.codelanguage==$("input[type='radio'][name='favoritecolor1']:checked").val()||""; 
 				bmobTool.setLimit(data);
 				bmobTool.findarticle();
  });
- });
+
 	</script>
 	</body>
 	</html>
