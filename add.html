@@ -461,10 +461,17 @@ $(function () {
 				o.findarticle=function(){
 					//设定网站限制
 					var findquery = new Bmob.Query(articleinfo)
-					var limit=o.getLimit();
 					findquery.ascending("articletitle");
 					if(limit.codelanguage)findquery.equalTo("codelanguage", limit.codelanguage);
-					findquery.containsAll("articletype", [limit.articletype]);
+					var limit=o.getLimit();
+					if(limit.articletype!=null)
+					{
+				        	findquery.containsAll("articletype", [limit.articletype]);
+					}
+					if(limit.articletype!=null)
+					{
+				        findquery.containsAll("codelanguage", [limit.codelanguage]);
+					}
 					//超出30秒则更新结果数
 					var i;
 					findquery.find({
@@ -1069,6 +1076,7 @@ $(function () {
         </div>
     </div> 
 	<script>
+		$(document).on("pagebeforeshow","#articlelit",bmobTool.findarticle);
 	function findSoft(){
 				var data={};
 				data.articletype="软件"
@@ -1082,6 +1090,13 @@ $(function () {
 				bmobTool.setLimit(data);
 				bmobTool.findarticle();
 			}
+			$(function(){
+ $("input[type='radio']").bind("change",function(event,ui){
+  	var data={};
+				data.codelanguage==$("input[type='radio'][name='favoritecolor1']:checked").val()||""; 
+				bmobTool.setLimit(data);
+				bmobTool.findarticle();
+ })
 	</script>
 	</body>
 	</html>
