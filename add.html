@@ -390,7 +390,7 @@ $(function () {
 					articledata.articletitle=$("#add-articlename").val();
 					articledata.articleurl="http://"+$("#add-articleurl").val().replace(/.*\/\//,"");
 				
-					articledata.codelanguage=$("input[type='radio'][name='favoritecolor']:checked").val()||""; 
+					articledata.codelanguage=$("input[type='radio'][name='languade']:checked").val()||""; 
 					tmpkey=[];
 					articledata.articletype=[];
 				$("input[type='checkbox'][name='add-articlekeyword']:checked").each(function(){tmpkey[this.value.replace(/\s/g,"")]=1;});
@@ -751,29 +751,29 @@ $(function () {
  <fieldset data-role="controlgroup" data-type="horizontal">  
                 <legend>语言:</legend>  
   
-                <input type="radio" name="favoritecolor" id="favoritecolora1" value="c#">  
+                <input type="radio" name="languade" id="favoritecolora1" value="c#">  
                 <label for="favoritecolora1">c#</label>   
   
-                <input type="radio" name="favoritecolor" id="favoritecolora2" value="java">  
+                <input type="radio" name="languade" id="favoritecolora2" value="java">  
                 <label for="favoritecolora2">java</label>   
   
-                <input type="radio" name="favoritecolor" id="favoritecolora3" value="c++">  
+                <input type="radio" name="languade" id="favoritecolora3" value="c++">  
                 <label for="favoritecolora3">c++</label>   
-  <input type="radio" name="favoritecolor" id="favoritecolora4" value="oc">  
+  <input type="radio" name="languade" id="favoritecolora4" value="oc">  
                 <label for="favoritecolora4">oc</label>   
-  <input type="radio" name="favoritecolor" id="favoritecolora5" value="c">  
+  <input type="radio" name="languade" id="favoritecolora5" value="c">  
                 <label for="favoritecolora5">c</label>   
-  <input type="radio" name="favoritecolor" id="favoritecolora6" value="python">  
+  <input type="radio" name="languade" id="favoritecolora6" value="python">  
                 <label for="favoritecolora6">python</label>   
-  <input type="radio" name="favoritecolor" id="favoritecolora7" value="php">  
+  <input type="radio" name="languade" id="favoritecolora7" value="php">  
                 <label for="favoritecolora7">php</label>   
-  <input type="radio" name="favoritecolor" id="favoritecolora8" value="javascript">  
+  <input type="radio" name="languade" id="favoritecolora8" value="javascript">  
                 <label for="favoritecolora8">javascript</label>   
-  <input type="radio" name="favoritecolor" id="favoritecolora9" value="sql">  
+  <input type="radio" name="languade" id="favoritecolora9" value="sql">  
                 <label for="favoritecolora9">sql</label>   
-  <input type="radio" name="favoritecolor" id="favoritecolora10" value="vb">  
+  <input type="radio" name="languade" id="favoritecolora10" value="vb">  
                 <label for="favoritecolora10">vb</label>   
-  <input type="radio" name="favoritecolor" id="favoritecolora11" value="ruby">  
+  <input type="radio" name="languade" id="favoritecolora11" value="ruby">  
                 <label for="favoritecolora11">ruby</label>   
   
             </fieldset>  
