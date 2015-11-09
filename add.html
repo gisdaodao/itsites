@@ -394,7 +394,8 @@ $(function () {
 					tmpkey=[];
 					articledata.articletype=[];
 				$("input[type='checkbox'][name='add-articlekeyword']:checked").each(function(){tmpkey[this.value.replace(/\s/g,"")]=1;});
-				articledata.articletype=tmpkey;
+				for(j in tmpkey)if(j!="")articledata.articletype.push(j);
+			
 				
 				keyword=[];
 				articledata.keyword=[];
